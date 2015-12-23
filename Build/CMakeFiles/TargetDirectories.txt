@@ -1,0 +1,5 @@
+/Users/ekaterina/Desktop/proga/mipt/Build/jsoncpp/src/lib_json/CMakeFiles/jsoncpp_lib.dir
+/Users/ekaterina/Desktop/proga/mipt/Build/CMakeFiles/ALL_BUILD.dir
+/Users/ekaterina/Desktop/proga/mipt/Build/CMakeFiles/tests.dir
+/Users/ekaterina/Desktop/proga/mipt/Build/CMakeFiles/ZERO_CHECK.dir
+/Users/ekaterina/Desktop/proga/mipt/Build/agraph/CMakeFiles/agraph.dir
