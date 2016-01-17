@@ -6,17 +6,11 @@
 //  Copyright (c) 2015 Екатерина Вишневская. All rights reserved.
 //
 
-
-using namespace std;
-#include <list>
-#include <vector>
-#include <unordered_set>
-
-
 using namespace std;
 #include <list>
 #include <vector>
 #include <set>
+#include <math.h>
 
 template <class V, class E>
 class Graph
@@ -39,12 +33,12 @@ public:
         bool t =true;
         vertexes.insert(a);
         vertexes.insert(b);
-        for (auto i:edges)
+        for (std::set<pair <V, set<pair<V, E>>>>::iterator i=edges.begin(); i!=edges.end(); ++i)
         {
-            if (i.first==a)
+            if ((*i).first==a)
             {
                 t=false;
-                i.second.insert(make_pair(b, e));
+                (*i).second.insert(make_pair(b, e));
             }
         }
         if (t)

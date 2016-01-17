@@ -80,17 +80,17 @@ SCENARIO("transport"){
     road e;
     e.w = 8;
     e.type = true;
-    G.AddEdge(1, 2, e);
+    G.AddEdge(0, 1, e);
     e.w = 10;
     e.type = false;
-    G.AddEdge(1, 2, e);
+    G.AddEdge(0, 1, e);
     e.w = 15;
     e.type = true;
-    G.AddEdge(2, 3, e);
+    G.AddEdge(1, 2, e);
     e.w = 5;
     e.type = false;
-    G.AddEdge(2, 3, e);
-    int s=1, t=3;
+    G.AddEdge(1, 2, e);
+    int s=0, t=2;
     REQUIRE( transport(G, s, t)==11.0);
 }
 

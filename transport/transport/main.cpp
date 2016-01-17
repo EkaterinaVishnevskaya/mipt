@@ -148,14 +148,14 @@ double transport(Graph <int, road> g, int s, int t)
             }
         }
         
-    //for (auto i: d1){
-    //    cout << i<< " ";
-    //}
-    //cout << endl;
-    //for (auto i: d0){
-    //    cout << i<< " ";
-    //}
-    //cout << endl;
+    for (auto i: d1){
+        cout << i<< " ";
+    }
+    cout << endl;
+    for (auto i: d0){
+        cout << i<< " ";
+    }
+    cout << endl;
     }
 
     return min (d0[t], d1[t]);
@@ -185,8 +185,8 @@ int main() {
     G.AddEdge(1, 3, e);
     e.w=0;
     G.AddEdge(3, 4, e);
-    int s=0, t=2;
-    cout << transport(G, s, t)<<'!';
+    int s=1, t=4;
+    cout << transport(G, s, t);
     
     //set<pair<int, set<pair<int, road>>>> a;
     //set<pair<int, road>> b;
