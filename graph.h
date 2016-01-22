@@ -24,7 +24,7 @@ public:
         V s;
         V t;
         E data;
-    };
+   };
     Graph()= default;
     ~Graph () = default;
     
@@ -33,18 +33,27 @@ public:
         bool t =true;
         vertexes.insert(a);
         vertexes.insert(b);
-        for (std::set<pair <V, set<pair<V, E>>>>::iterator i=edges.begin(); i!=edges.end(); ++i)
+        for (typename std::set<pair <V, set<pair<V, E>>>>::iterator i=edges.begin(); i!=edges.end(); ++i)
         {
             if ((*i).first==a)
             {
                 t=false;
-                (*i).second.insert(make_pair(b, e));
+                cout << typeid((*i).second).name() << endl;
+                //cout << (*i).second.size()
+                pair <V, set<pair<V, E>>> p = make_pair(a, (*i).second);
+                edges.erase(i);
+                //typedef typename pair <V, set<pair<V, E>>>::iterator aaa;
+                //const_cast<aaa>(i);
+                p.second.insert(make_pair(b, e));
+                edges.insert(p);
+                break;
             }
         }
         if (t)
         {
             set<pair<V, E>> t;
             t.insert(make_pair(b, e));
+            //cout << typeid(x.second).name() << endl;
             edges.insert(make_pair(a, t));
         }
     }
